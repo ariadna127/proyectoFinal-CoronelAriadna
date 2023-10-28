@@ -4,7 +4,6 @@ fetch("./json/alumnos.json")
 .then(response => response.json())
 .then(data => {
     alumnos = data;
-    cargarListadoAlumnos(alumnos);
 })
 
 
