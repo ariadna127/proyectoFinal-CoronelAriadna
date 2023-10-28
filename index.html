@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto X</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <h1>INSTITUTO <span>X</span></h1>
+        <nav class="barra-navegacion">
+            <ul class="ul-nav">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#">ACERCA DE</a></li>
+                <li><a href="#">CURSOS</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="seccion-principal" class="seccion-principal">
+            <div class="contenedor-ingreso">
+                <h2 class="h2-area">AREA DOCENTES</h2>
+                <form id="ingreso-docente" class="ingreso-docente" action="">
+                    <p id="p-form-ingreso" class="p-form-ingreso">Para visualizar listado de alumnos ingrese usuario y
+                        contraseña</p>
+                    <label for="usuario">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" required>
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" name="contraseña" id="contraseña" required>
+                    <input type="submit" value="INGRESAR" id="ingresar">
+                </form>
+            </div>
+            <div id="registro-alumno" class="contendor-registro-alumno">
+                <button id="boton-registro-alumno" class="boton-registro-alumno">REGISTRAR ALUMNO</button>
+            </div>
+        </section>
+        <button id="salir" class="salir disabled">SALIR</button>
+        <div id="div-form-registro" class="div-form-registro disabled">
+            <h2>REGISTRAR ALUMNO</h2>
+            <form id="form-registro" class="form-registro" action="">
+                <div class="div-form">
+                    <label for="nombre-alumno">Nombre del alumno</label>
+                    <input type="text" name="nombre-alumno" id="nombre-alumno">
+                </div>
+                <div class="div-form">
+                    <h3>Materia: Matemáticas</h3>
+                    <label for="primer-trimestreM">Primer trimestre:</label>
+                    <input type="number" name="primer-trimestreM" id="primer-trimestreM">
+                    <label for="segundo-trimestreM">Segundo trimestre:</label>
+                    <input type="number" id="segundo-trimestreM" name="segundo-trimestreM">
+                    <label for="tercer-trimestreM">Tercer trimestre:</label>
+                    <input type="number" name="tercer-trimestreM" id="tercer-trimestreM">
+                </div>
+                <div class="div-form">
+                    <h3>Materia: Lengua</h3>
+                    <label for="primer-trimestreL">Primer trimestre:</label>
+                    <input type="number" name="primer-trimestreL" id="primer-trimestreL">
+                    <label for="segundo-trimestreL">Segundo trimestre:</label>
+                    <input type="number" name="segundo-trimestreL" id="segundo-trimestreL">
+                    <label for="tercer-trimestreL">Tercer trimestre:</label>
+                    <input type="number" name="tercer-trimestreL" id="tercer-trimestreL">
+                </div>
+                <div class="div-form">
+                    <h3>Materia: Ciencias</h3>
+                    <label for="primer-trimestreC">Primer trimestre:</label>
+                    <input type="number" name="primer-trimestreC" id="primer-trimestreC">
+                    <label for="segundo-trimestreC">Segundo trimestre:</label>
+                    <input type="number" name="segundo-trimestreC" id="segundo-trimestreC">
+                    <label for="tercer-trimestreC">Tercer trimestre:</label>
+                    <input type="number" name="tercer-trimestreC" id="tercer-trimestreC">
+                </div>
+                <div class="div-form">
+                    <button class="boton-enviar-registro" type="submit">ENVIAR</button>
+                </div>
+
+            </form>
+        </div>
+
+        <div id="contenedor-alumnos" class="contenedor-alumnos disabled">
+            <!--esto se llena con JS-->
+
+        </div>
+        <div id="alert-alumno-registrado" class="alert-alumno-registrado disabled">
+            <p>¡El alumno x se ha registrado exitosamente!</p>
+            <button id="continuar" class="continuar">Continuar</button>
+        </div>
+    </main>
+    <footer>
+        <h2>Instituto X</h2>
+        <p class="texto-footer">© 2023 Ari Coder</p>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

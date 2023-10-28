@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, input, textarea, ul{
+    margin: 0;
+    padding: 0;
+} 
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(7, 7, 41);
+    color: white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5625rem;
+    height: 6.25rem;
+    background-color: rgb(7, 7, 41);
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+
+h1{
+    color: orange;
+}
+h1 span{
+    color: white;
+}
+
+.ul-nav{
+    display: flex;
+    gap: .9375rem;
+}
+.ul-nav li a{
+    color: white;
+    font-weight: bolder;
+}
+
+.seccion-principal{
+    display: flex;
+    flex-direction: column;
+    margin: 1.875rem;
+    gap: 1.875rem;
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
+}
+.seccion-principal div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.h2-area{
+    font-size: 3.125rem;
+    font-weight:800;
+}
+
+.ingreso-docente{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    font-size: 20px;
+    padding-top: 1.875rem;
+}
+.ingreso-docente input{
+    background-color: rgb(8, 8, 33);
+}
+
+.p-form-ingreso{
+    color: orange;
+}
+
+.contenedor-registro-alumno{
+    padding-top: 1.875rem;
+}
+
+.boton-registro-alumno{
+    color: orange;
+    font-weight:800;
+    cursor: pointer;
+}
+
+form input, button{
+    border: 1px solid white;
+    background-color: rgb(7, 7, 41);
+    height: 2.5rem;
+    width: 70%;
+    color: white;
+}
+
+.div-form-registro{
+    margin: 1.875rem;
+    margin-top: 6.25rem;
+    width: 100%;
+}
+.div-form-registro h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.form-registro{
+    display: flex;
+    gap: 1.5625rem;
+    width: 100%;
+    color: orange;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.div-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: .625rem;
+}
+
+.salir{
+    background-color: orange;
+    color: white;
+    width: 10%;
+    height: 1.875rem;
+    margin-top: 1.875rem;
+    margin-left: 1.875rem;
+    cursor: pointer;
+}
+
+
+h3{
+    color: white;
+}
+
+.contenedor-alumnos{
+    margin-top: 6.25rem;
+    margin-bottom: 3.125rem;
+}
+
+.contenedor-alumnos h2{
+    color: orange;
+    font-size: 2.1875rem;
+    text-align: center;
+    margin-bottom: 2.5rem
+}
+
+.alumno{
+    margin-bottom: 3.75rem;
+}
+
+.alumno h3{
+    font-size: 1.75rem;
+    text-decoration:underline;
+    margin-bottom: .625rem;
+    text-align: center;
+}
+
+.materias{
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    gap: 1.25rem;
+    justify-content: center;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+}
+
+.materia{
+    border: 1px solid white;
+    height: 10.625rem;
+    background-color: rgb(8, 8, 33);
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    padding-top: .625rem;
+}
+
+.materia h3{
+    font-size: 1.25rem;
+}
+.buton-baja{
+    width: 20%;
+    margin-left: 1.5625rem;
+    background-color: rgb(122, 3, 3);
+    cursor: pointer;
+}
+
+.alert-alumno-registrado{
+    height: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .9375rem;
+    margin-left: 1.875rem;
+    color: orange;
+}
+.continuar{
+    width: 10%;
+    height: 1.25rem;
+
+}
+
+footer{
+    border-top: 1px solid white;
+    height: 6.25rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+}
+
+footer h2,
+footer p{
+    padding-left: 1.875rem;
+    padding-bottom: .9375rem;
+
+}
+
+
+.disabled{
+    display: none;
+}
+
+.swal2-title{
+    color: orange !important;
+}
