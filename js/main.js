@@ -4,6 +4,7 @@ fetch("./json/alumnos.json")
 .then(response => response.json())
 .then(data => {
     alumnos = data;
+    calcularPromedio(alumnos);
 })
 
 
@@ -46,7 +47,7 @@ let contenedorAlumnosClase;
 
 
 //Funcion para agregar propiedad promedio al arreglo Materias del cada objeto del arreglo Alumnos
-function calcularPromedio() {
+function calcularPromedio(alumnos) {
     //Primero accedemos a cada alumno dentro del array alumnos
     alumnos.forEach(alumno => {
         //accedemos al arreglo materias que esta dentro de cada alumno
@@ -56,7 +57,6 @@ function calcularPromedio() {
     })
 }
 
-calcularPromedio();
 
 
 //Funcion para mostrar listado de alumnos en el DOM
