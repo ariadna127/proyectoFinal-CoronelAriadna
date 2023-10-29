@@ -113,6 +113,10 @@ function cargarListadoAlumnos(listaAlumnos) {
     setContenedorAlumnosLs();
 }
 
+// const setAlumnosLS = () => {
+    
+// }
+
 const setSeccionPrincipalLs = () =>{
     //Verificamos y guardamos en seccionPrincipalClase si seccionPrincipal tiene la clase disabled
     seccionPrincialClase = seccionPrincipal.classList.contains("disabled");
@@ -130,6 +134,13 @@ function ingresarAlListado(e) {
     e.preventDefault();
     if (inputUsuario.value === "docente" && inputContraseña.value === "12345678") {
         seccionPrincipal.classList.add("disabled");
+        const alumnosStorage = getAlumnosStorage();
+        //verificamos q dentro de alumnos storage haya algo y no este vacio
+        if (alumnosStorage) {
+            //cargamos los datos de alumnosStorage dentro de alumnos
+            alumnos = alumnosStorage;
+        }
+        console.log(alumnos);
         cargarListadoAlumnos(alumnos);
         formIngresoDocente.reset();
     } else {
@@ -195,6 +206,8 @@ const mostrarRegistoAlumno = () =>{
     setSeccionPrincipalLs();
     botonSalir.classList.remove("disabled");
     setContenedorAlumnosLs();
+    getAlumnosStorage();
+    console.log(alumnos);
 }
 
 
@@ -215,10 +228,8 @@ const getSeccionPrincipal = () => {
         seccionPrincipal.classList.add("disabled");
         const contenedorAlumnosLS = localStorage.getItem("contenedor-alumnos");
         if (contenedorAlumnosLS === "true") {
-            console.log("deberia cargar el registro");
             mostrarRegistoAlumno();
         }else{
-            console.log("deberian cargar los alumnos");
             //guardamos lo que nos returna la funcion getalumnosstorage en esa variable
         const alumnosStorage = getAlumnosStorage();
         //verificamos q dentro de alumnos storage haya algo y no este vacio
@@ -226,6 +237,7 @@ const getSeccionPrincipal = () => {
             //cargamos los datos de alumnosStorage dentro de alumnos
             alumnos = alumnosStorage;
         }
+
         cargarListadoAlumnos(alumnos);
         }
 
@@ -243,7 +255,11 @@ const getSeccionPrincipal = () => {
 }
 
 const agregarAlumno = () =>{
-    const idAlumnoNuevo = alumnos.length;
+    const lastAlumno = alumnos[alumnos.length - 1];
+    console.log(lastAlumno);
+    idAlumnoNuevo = lastAlumno.id + 1;
+    console.log(idAlumnoNuevo);
+
 
     const materia1 = {
         materia: "Matematicas",
@@ -277,7 +293,11 @@ const agregarAlumno = () =>{
     alumno.materias.forEach(materia => {
         materia.promedio = ((Number(materia.nota1) + Number(materia.nota2) + Number(materia.nota3))/3).toFixed(2);
     })
+    console.log(alumno);
     alumnos.push(alumno);
+    console.log(alumnos);
+    localStorage.setItem("alumnos", JSON.stringify(alumnos));
+    
 }
 
 
@@ -299,6 +319,7 @@ botonSalir.addEventListener("click", () => {
     seccionPrincipal.classList.remove("disabled");
     contenedorFormRegistro.classList.add("disabled");
     botonSalir.classList.add("disabled");
+    console.log(alumnos);
     //Verificamos y guardamos en seccionPrincipalClase si seccionPrincipal tiene la clase disabled
     seccionPrincialClase = seccionPrincipal.classList.contains("disabled");
     //Guardamos en el localStorage seccionPrincipalClase la cual almacena un valor booleano
